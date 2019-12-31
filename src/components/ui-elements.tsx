@@ -6,3 +6,9 @@ export const View: React.FC = (props) => (
         {props.children}
     </div>
 )
+
+export const Inner: React.FC = (props) => (
+    <div className="full-width">
+        {props.children}
+    </div>
+)
