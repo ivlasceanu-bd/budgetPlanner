@@ -1,0 +1,21 @@
+.logo {
+    text-align: center;
+    font-size: 35px;
+}
+
+.wrapper {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.label {
+    margin-bottom: 10px;
+}
+
+ion-icon {
+    margin-right: 10px;
+}
