@@ -24,7 +24,7 @@
 
   --ion-text-color: #ffffff;
   --ion-text-color-rgb: 255,255,255;
-  --ion-color-primary: #d83256;
+  --ion-color-primary: #428cff;
   --ion-color-primary-rgb: 66,140,255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255,255,255;
@@ -95,7 +95,7 @@
  */
 
  body.dark {
-  --ion-color-primary: #d83256;
+  --ion-color-primary: #428cff;
   --ion-color-primary-rgb: 66,140,255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255,255,255;

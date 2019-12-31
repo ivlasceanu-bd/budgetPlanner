@@ -1,16 +1,20 @@
 import { IonText, IonPage, IonIcon, IonItemGroup, IonItem, IonInput, IonLabel, IonButton } from '@ionic/react';
 import React, { Component } from 'react';
+import { RouteComponentProps } from 'react-router';
 import { View } from '../../components/ui-elements';
 import { mail, key, eye, eyeOff } from 'ionicons/icons';
 import './login.css';
 
-class Login extends Component {
+import firebase from '../../firebase';
+
+class Login extends Component<RouteComponentProps, {}> {
+
 
   state = {
     email: '',
     password: '',
     passwordVisible: false,
-    error: null
+    error: ''
   }
   
   handleInputChange = (event: any) => {
@@ -30,18 +34,43 @@ class Login extends Component {
   }
 
   handleLogin = () => {
-    console.log('handle login');
+    const { email, password } = this.state;
+    firebase
+         .auth()
+         .signInWithEmailAndPassword(email, password)
+         .then((user) => {
+           this.props.history.push('/home');
+         })
+         .catch((error) => {
+           this.setState({ error: error.message });
+         });
+
   }
 
   handleSignUp = () => {
-    console.log('handle signup');
+    const { email, password } = this.state;
+
+    firebase
+     .auth()
+     .createUserWithEmailAndPassword(email, password)
+     .then((user) => {
+       console.log(user)
+       this.setState({
+        email: '',
+        password: '',
+        error: ''
+      })
+     })
+     .catch((error) => {
+       this.setState({ error: error.message });
+     });
   }
 
 render() {
   const { email, password, error, passwordVisible } = this.state;  
   
   return (
-    <IonPage className="body">
+    <IonPage>
       <View>
         <div className="wrapper">
           <IonText color="primary">
@@ -90,6 +119,8 @@ render() {
         <IonItemGroup>
           <IonButton expand="block" type="button" onClick={() => this.handleLogin()}>Login</IonButton>
           <IonButton expand="block" type="button" fill="clear" onClick={() => this.handleSignUp() }>Sign up</IonButton>
+
+          <IonText color="danger" className="error">{ error }</IonText>
         </IonItemGroup>
 
         </div>

@@ -16,6 +16,14 @@
     margin-bottom: 10px;
 }
 
+.error {
+    height: 30px;
+    display: block;
+    width: 100%;
+    font-size: 70%;
+    text-align: center;
+}
+
 ion-icon {
     margin-right: 10px;
 }
