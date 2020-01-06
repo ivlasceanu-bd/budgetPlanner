@@ -1,8 +1,21 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
+/* @import '../assets/Dosis.css'; */
+@import url('https://fonts.googleapis.com/css?family=Assistant:200,300&display=swap');
+
 /** Ionic CSS Variables **/
 :root {
+
+  --border-radius: 2px;
+  
+    /* Set the background of the entire app */
+    --ion-background-color: #151618;
+    --ion-text-color: #ffffff;
+
+    /* Set the font family of the entire app */
+    --ion-font-family: -apple-system, BlinkMacSystemFont, "Assistant", "Roboto", sans-serif;
+
   /** primary **/
   --ion-color-primary: #dd3d60;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -74,9 +87,18 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  --border-radius: 2px;
 }
 
-.ion-page {
-  background-color: var(--ion-color-dark);
-  color: var(--ion-color-dark-contrast);
+
+html,
+body {
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 200 !important;
+  margin: 0;
+  padding: 0;
 }

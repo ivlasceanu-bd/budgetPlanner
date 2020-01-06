@@ -12,3 +12,9 @@ export const Inner: React.FC = (props) => (
         {props.children}
     </div>
 )
+
+export const MenuInner: React.FC = (props) => (
+    <div className="menu-wrapper">
+        {props.children}
+    </div>
+)

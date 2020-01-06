@@ -19,7 +19,7 @@
 */
 
 :root {
-  --ion-headings-font-weight: 300;
+  --ion-headings-font-weight: 200;
 
   --ion-color-angular: #ac282b;
   --ion-color-communication: #8e8d93;
@@ -32,10 +32,10 @@
   --ion-color-navigation: #6600cc;
 }
 
-.md {
+/* .md {
   --ion-toolbar-background: var(--ion-color-primary);
   --ion-toolbar-color: #fff;
   --ion-toolbar-color-activated: #fff;
-}
+} */
 
 
