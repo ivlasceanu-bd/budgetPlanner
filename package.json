@@ -11,7 +11,7 @@
     "@types/react-dom": "^16.9.1",
     "@types/react-router": "^5.1.1",
     "@types/react-router-dom": "^5.1.0",
-    "firebase": "^7.6.1",
+    "firebase": "^10.9.0",
     "goog-webfont-dl": "^1.0.3",
     "ionicons": "^4.6.3",
     "react": "^16.10.2",
